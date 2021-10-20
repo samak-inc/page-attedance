@@ -56,7 +56,61 @@
   </head>
   <body translate="no">
     <!-- [START APP] -->
-    <div id="samak-attedance" class="smk__attedance" role="application"></div>
+    <article id="samak-attedance" class="smk__attedance" role="application">
+      <!-- [START] -->
+      <header class="smk__header" role="group"></header>
+      <!-- [END] -->
+      <nav class="smk__pagination">
+        <button class="pagination__btn pagination__btn--prev">
+          <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <!-- [START LIST] -->
+        <section class="pagination__date" role="group">
+          <ul class="pagination__weeks">
+            <li class="pagination__week pagination__week--current">SAT</li>
+            <li class="pagination__week">SUN</li>
+            <li class="pagination__week">MON</li>
+            <li class="pagination__week">TUE</li>
+            <li class="pagination__week">WED</li>
+            <li class="pagination__week">THU</li>
+            <li class="pagination__week">FRI</li>
+          </ul>
+          <ul class="pagination__days">
+            <li class="pagination__item">
+              <button class="pagination__day">1</button>
+            </li>
+            <li class="pagination__item">
+              <button class="pagination__day">2</button>
+            </li>
+            <li class="pagination__item">
+              <button class="pagination__day">3</button>
+            </li>
+            <li
+              class="
+                pagination__item
+                pagination__item--current
+                pagination__item--today
+              "
+            >
+              <button class="pagination__day">4</button>
+            </li>
+            <li class="pagination__item">
+              <button class="pagination__day">5</button>
+            </li>
+            <li class="pagination__item">
+              <button class="pagination__day">6</button>
+            </li>
+            <li class="pagination__item">
+              <button class="pagination__day">7</button>
+            </li>
+          </ul>
+        </section>
+        <!-- [END LIST] -->
+        <button class="pagination__btn pagination__btn--next">
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </button>
+      </nav>
+    </article>
     <!-- [END APP] -->
 
     <!-- [START SCRIPTS] -->
