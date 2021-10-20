@@ -1,0 +1,65 @@
+/* powered by yek-sass */
+$_background: #d3dcdd;
+$_cool-background: #eaf2ff;
+$_cool-white: #f9fcff;
+$_cool-sky: #add8e6;
+$_cool-blue: #5c9dc0;
+$_cool-green: #bdb369;
+$_cool-black: #002e63;
+$_cool-silver: #eeeeee;
+$_cool-gray: darken(#dbdcdb, 25);
+$_description: #8c9294;
+$_btn-hover: #e5eff9;
+$_icon-hover: $_cool-blue;
+:root {
+  --seek_listener_percentage: 0%;
+  --volume_listener_percentage: 50%;
+}
+
+body {
+  @include yek-aligns;
+}
+
+/* [APPILICATION] */
+.smk {
+  &__attedance {
+    @include yek-flex(column);
+    @include yek-size(100%, 100vh);
+    position: relative;
+    overflow: hidden;
+    background-color: $_cool-white;
+    // background-color: $_background;
+    // box-shadow: 0 4px 7px rgba($_cool-black, 0.3);
+    // border-radius: 8px;
+  }
+}
+
+.smk__header {
+}
+
+/* [PAGINATION] */
+.smk__pagination {
+  @include yek-flex;
+  @include yek-width(100%);
+}
+.pagination {
+  &__btn {
+    @include yek-size(25px, 100%);
+  }
+  &__date {
+    @include yek-size(calc(100% - 50px), 100%);
+    @include yek-flex(column);
+  }
+  &__weeks,
+  &__days {
+    @include --clear-list;
+    @include yek-flex(row);
+    @include yek-align(space-around);
+  }
+
+  &__day,
+  &__item,
+  &__week {
+    text-align: center;
+  }
+}
