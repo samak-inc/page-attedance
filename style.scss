@@ -18,20 +18,34 @@ figure {
 }
 
 /* [APPILICATION] */
-.smk {
-  &__attedance {
-    @include yek-flex(column);
-    @include yek-size(100%, 100vh);
-    position: relative;
-    overflow: hidden;
-    background-color: $_cool-white;
-    // background-color: $_background;
-    // box-shadow: 0 4px 7px rgba($_cool-black, 0.3);
-    // border-radius: 8px;
-  }
-}
+.attedance {
+  @include flex(column);
+  @include size(100%, 100vh);
+  position: relative;
+  overflow: hidden;
+  background-color: $c-background;
+  // box-shadow: 0 4px 7px rgba($c-black, 0.3);
+  @include --radius(8);
 
-.smk__header {
+  // MARK : header
+  &__header {
+    @include flex;
+    @include align(space-between);
+    @include height(25px);
+    padding: 4px 9px;
+  }
+
+  // MARK : pagination
+  &__pagination {
+    @include size(100%, 95px);
+    padding: 10px 0;
+    box-shadow: 0 0.3rem 0.3rem rgba($c-secondary, 0.4);
+  }
+
+  // MARK : view
+  &__view {
+    @include size(100%, calc(100% - 150px));
+  }
 }
 
 /* [PAGINATION] */
