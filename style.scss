@@ -65,27 +65,70 @@ figure {
 }
 
 /* [PAGINATION] */
-.smk__pagination {
-  @include yek-flex;
-  @include yek-width(100%);
-}
 .pagination {
+  @include flex(column);
+  margin-top: 30px;
+
+  &__header {
+    @include flex;
+    @include size(100%, 20px);
+    @include align(space-between);
+    padding: 0 43px;
+    font-size: 0.8em;
+
+    h3 {
+      @include --clear-space;
+    }
+  }
+  &__main {
+    @include flex;
+    @include size(100%, 55px);
+  }
+
+  &__btn,
+  &__day {
+    @include --clear-btn;
+    background-color: transparent;
+  }
+
   &__btn {
-    @include yek-size(25px, 100%);
+    @include size(25px, 100%);
+    @include flex;
+    @include aligns;
   }
   &__date {
-    @include yek-size(calc(100% - 50px), 100%);
-    @include yek-flex(column);
-  }
-  &__weeks,
-  &__days {
     @include --clear-list;
-    @include yek-flex(row);
-    @include yek-align(space-around);
+    @include size(calc(100% - 50px), 100%);
+    @include flex;
+    @include aligns;
+  }
+
+  &__item {
+    @include flex(column);
+    @include size(14.28%, 100%);
+    @include align(space-around);
+    @include --radius;
+    padding: 6px 4px;
+    margin: 0;
+    cursor: pointer;
+
+    &--today {
+      // MARK : theme 1
+      box-shadow: 0.1rem 0.1rem 0.15rem rgba($c-secondary, 0.5),
+        -0.1rem 0.1rem 0.15rem rgba($c-secondary, 0.5);
+    }
+  }
+
+  &__btn,
+  &__item {
+    @include --btn-effect;
+  }
+
+  &__week {
+    font-size: 0.8rem;
   }
 
   &__day,
-  &__item,
   &__week {
     text-align: center;
   }
