@@ -10,7 +10,11 @@ $c-black: #333333;
 $c-background: #e8eaee;
 
 body {
-  @include yek-aligns;
+  @include aligns;
+  font-family: 'Roboto', 'sans-serif' !important;
+}
+figure {
+  @include --clear-space;
 }
 
 /* [APPILICATION] */
