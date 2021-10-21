@@ -1,20 +1,4 @@
-/* powered by yek-sass */
-$_background: #d3dcdd;
-$_cool-background: #eaf2ff;
-$_cool-white: #f9fcff;
-$_cool-sky: #add8e6;
-$_cool-blue: #5c9dc0;
-$_cool-green: #bdb369;
-$_cool-black: #002e63;
-$_cool-silver: #eeeeee;
-$_cool-gray: darken(#dbdcdb, 25);
-$_description: #8c9294;
-$_btn-hover: #e5eff9;
-$_icon-hover: $_cool-blue;
-:root {
-  --seek_listener_percentage: 0%;
-  --volume_listener_percentage: 50%;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
   @include yek-aligns;
