@@ -56,61 +56,243 @@
   </head>
   <body translate="no">
     <!-- [START APP] -->
-    <article id="samak-attedance" class="smk__attedance" role="application">
-      <!-- [START] -->
-      <header class="smk__header" role="group"></header>
-      <!-- [END] -->
-      <nav class="smk__pagination">
-        <button class="pagination__btn pagination__btn--prev">
-          <i class="fa fa-chevron-left" aria-hidden="true"></i>
+    <main
+      id="samak-attedance"
+      class="smk__attedance attedance"
+      role="application"
+    >
+      <!-- [START HEADER] -->
+      <header class="attedance__header header">
+        <button class="header__btn header__btn--back">
+          <i class="fa fa-arrow-left"></i>
         </button>
-        <!-- [START LIST] -->
-        <section class="pagination__date" role="group">
-          <ul class="pagination__weeks">
-            <li class="pagination__week pagination__week--current">SAT</li>
-            <li class="pagination__week">SUN</li>
-            <li class="pagination__week">MON</li>
-            <li class="pagination__week">TUE</li>
-            <li class="pagination__week">WED</li>
-            <li class="pagination__week">THU</li>
-            <li class="pagination__week">FRI</li>
-          </ul>
-          <ul class="pagination__days">
+        <button class="header__btn header__btn--add">
+          <i class="fa fa-plus"></i>
+        </button>
+        <button class="header__btn header__btn--search">
+          <i class="fa fa-search"></i>
+        </button>
+        <button class="header__btn header__btn--sort">
+          <i class="fa fa-sort-amount-down"></i>
+        </button>
+      </header>
+      <!-- [END HEADER] -->
+      <!-- [START PAGINATION] -->
+      <nav class="attedance__pagination pagination">
+        <section class="pagination__header">
+          <h3>2021 Oct</h3>
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+        </section>
+        <section class="pagination__main">
+          <button class="pagination__btn pagination__btn--prev">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          <!-- [START LIST] -->
+          <!-- pagination__item pagination__item--current pagination__item--today -->
+          <ul class="pagination__date">
             <li class="pagination__item">
+              <span class="pagination__week">SAT</span>
               <button class="pagination__day">1</button>
             </li>
             <li class="pagination__item">
+              <span class="pagination__week">SUN</span>
               <button class="pagination__day">2</button>
             </li>
             <li class="pagination__item">
+              <span class="pagination__week">MON</span>
               <button class="pagination__day">3</button>
             </li>
-            <li
-              class="
-                pagination__item
-                pagination__item--current
-                pagination__item--today
-              "
-            >
-              <button class="pagination__day">4</button>
+            <li class="pagination__item pagination__item--today">
+              <span class="pagination__week"><strong>TUE</strong></span>
+              <button class="pagination__day"><strong>4</strong></button>
             </li>
             <li class="pagination__item">
+              <span class="pagination__week">WED</span>
               <button class="pagination__day">5</button>
             </li>
             <li class="pagination__item">
+              <span class="pagination__week">THU</span>
               <button class="pagination__day">6</button>
             </li>
             <li class="pagination__item">
+              <span class="pagination__week">FRI</span>
               <button class="pagination__day">7</button>
             </li>
           </ul>
+          <!-- [END LIST] -->
+          <button class="pagination__btn pagination__btn--next">
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+          </button>
         </section>
-        <!-- [END LIST] -->
-        <button class="pagination__btn pagination__btn--next">
-          <i class="fa fa-chevron-right" aria-hidden="true"></i>
-        </button>
       </nav>
-    </article>
+      <!-- [END PAGINATION] -->
+      <!-- [START MAIN] -->
+      <article class="attedance__view list_view">
+        <ul id="attedance-list" class="card__list">
+          <!-- [START ITEM] -->
+          <li class="card__item">
+            <div class="card__detail">
+              <header class="card__header">
+                <h3 class="card__title">Daniel Martin</h3>
+                <span class="card__description">Developer</span>
+              </header>
+              <table class="card__table">
+                <thead>
+                  <tr>
+                    <th scope="col">Arrival</th>
+                    <th scope="col">Departure</th>
+                    <!-- <th scope="col">State</th> -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong> 07 : 00 </strong></td>
+                    <td><strong> 15 : 30 </strong></td>
+                    <!-- <td><i class="fa fa-check"></i></td> -->
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <figure class="card__profile">
+              <img src="./screenshots/profile.png" alt="" class="card__image" />
+              <figcaption class="card__state">
+                <!-- STATE_COLOR || USERNAME -->
+              </figcaption>
+            </figure>
+          </li>
+          <!-- [END ITEM] -->
+          <!-- [START ITEM] -->
+          <li class="card__item">
+            <div class="card__detail">
+              <header class="card__header">
+                <h3 class="card__title">Mike Pompeo</h3>
+                <span class="card__description">Developer</span>
+              </header>
+              <table class="card__table">
+                <thead>
+                  <tr>
+                    <th scope="col">Arrival</th>
+                    <th scope="col">Departure</th>
+                    <!-- <th scope="col">State</th> -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong> 07 : 00 </strong></td>
+                    <td><strong> 15 : 30 </strong></td>
+                    <!-- <td><i class="fa fa-check"></i></td> -->
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <figure class="card__profile">
+              <img src="./screenshots/profile.png" alt="" class="card__image" />
+              <figcaption class="card__state card__state--state_1">
+                <!-- STATE_COLOR || USERNAME -->
+              </figcaption>
+            </figure>
+          </li>
+          <!-- [END ITEM] -->
+          <!-- [START ITEM] -->
+          <li class="card__item">
+            <div class="card__detail">
+              <header class="card__header">
+                <h3 class="card__title">John Smith</h3>
+                <span class="card__description">Developer</span>
+              </header>
+              <table class="card__table">
+                <thead>
+                  <tr>
+                    <th scope="col">Arrival</th>
+                    <th scope="col">Departure</th>
+                    <!-- <th scope="col">State</th> -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong> 07 : 00 </strong></td>
+                    <td><strong> 15 : 30 </strong></td>
+                    <!-- <td><i class="fa fa-check"></i></td> -->
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <figure class="card__profile">
+              <img src="./screenshots/profile.png" alt="" class="card__image" />
+              <figcaption class="card__state card__state--state_2">
+                <!-- STATE_COLOR || USERNAME -->
+              </figcaption>
+            </figure>
+          </li>
+          <!-- [END ITEM] -->
+          <!-- [START ITEM] -->
+          <li class="card__item">
+            <div class="card__detail">
+              <header class="card__header">
+                <h3 class="card__title">Karl Smith</h3>
+                <span class="card__description">Developer</span>
+              </header>
+              <table class="card__table">
+                <thead>
+                  <tr>
+                    <th scope="col">Arrival</th>
+                    <th scope="col">Departure</th>
+                    <!-- <th scope="col">State</th> -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong> 07 : 00 </strong></td>
+                    <td><strong> 15 : 30 </strong></td>
+                    <!-- <td><i class="fa fa-check"></i></td> -->
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <figure class="card__profile">
+              <img src="./screenshots/profile.png" alt="" class="card__image" />
+              <figcaption class="card__state card__state--state_3">
+                <!-- STATE_COLOR || USERNAME -->
+              </figcaption>
+            </figure>
+          </li>
+          <!-- [END ITEM] -->
+          <!-- [START ITEM] -->
+          <li class="card__item">
+            <div class="card__detail">
+              <header class="card__header">
+                <h3 class="card__title">Piter Parker</h3>
+                <span class="card__description">Developer</span>
+              </header>
+              <table class="card__table">
+                <thead>
+                  <tr>
+                    <th scope="col">Arrival</th>
+                    <th scope="col">Departure</th>
+                    <!-- <th scope="col">State</th> -->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong> 07 : 00 </strong></td>
+                    <td><strong> 15 : 30 </strong></td>
+                    <!-- <td><i class="fa fa-check"></i></td> -->
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <figure class="card__profile">
+              <img src="./screenshots/profile.png" alt="" class="card__image" />
+              <figcaption class="card__state card__state--state_4">
+                <!-- STATE_COLOR || USERNAME -->
+              </figcaption>
+            </figure>
+          </li>
+          <!-- [END ITEM] -->
+        </ul>
+      </article>
+      <!-- [END MAIN] -->
+    </main>
     <!-- [END APP] -->
 
     <!-- [START SCRIPTS] -->
