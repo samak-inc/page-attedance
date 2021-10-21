@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+/* powered by sass */
+
+$c-primary: #5374ff;
+$c-secondary: #738999;
+$c-gray: #f2f5f8;
+$c-white: #ffffff;
+$c-black: #333333;
+$c-background: #e8eaee;
+
 body {
   @include yek-aligns;
 }
