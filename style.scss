@@ -48,6 +48,22 @@ figure {
   }
 }
 
+.header {
+  &__btn {
+    @include --clear-btn;
+    // @include --radius(5);
+    @include size(16px, 16px);
+    padding: 4px;
+
+    text-align: center;
+    vertical-align: middle;
+    line-height: 5px;
+  }
+  &__btn i {
+    font-size: 0.8em;
+  }
+}
+
 /* [PAGINATION] */
 .smk__pagination {
   @include yek-flex;
