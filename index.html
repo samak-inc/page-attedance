@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Mikoloism - Mini Music Player (HTML, CSS, JS)</title>
+    <title>Mikoloism - Attendance S.M.K (HTML, CSS, JS)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="apple-mobile-web-app-title" content="CodePen" />
     <link
@@ -27,15 +27,15 @@
     />
     <meta
       name="description"
-      content="Mikoloism - Mini Music Player (HTML, SCSS, JS)"
+      content="Mikoloism - Attendance S.M.K (HTML, SCSS, JS)"
     />
     <meta
       property="og:title"
-      content="Mikoloism - Mini Music Player (HTML, SCSS, JS)"
+      content="Mikoloism - Attendance S.M.K (HTML, SCSS, JS)"
     />
     <meta
       property="og:description"
-      content="Mikoloism - Mini Music Player (HTML, SCSS, JS)"
+      content="Mikoloism - Attendance S.M.K (HTML, SCSS, JS)"
     />
     <meta
       property="og:image"
@@ -55,17 +55,22 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body translate="no">
-    <!-- [START APP] -->
+    <!-- MARK : codepen -->
+    <!-- #region [START APP] -->
     <main
-      id="samak-attedance"
-      class="smk__attedance attedance"
+      id="samak-attendance"
+      class="smk__attendance attendance"
       role="application"
     >
-      <!-- [START HEADER] -->
-      <header class="attedance__header header">
+      <!-- #region [START HEADER] -->
+      <header class="attendance__header header">
         <button class="header__btn header__btn--back">
-          <i class="fa fa-arrow-left"></i>
+          <!-- <i class="fa fa-th-large"></i> -->
+          <i class="fa fa-chevron-left"></i>
         </button>
+        <section class="header__title">
+          <!-- <h4>Attendance</h4> -->
+        </section>
         <button class="header__btn header__btn--add">
           <i class="fa fa-plus"></i>
         </button>
@@ -73,124 +78,176 @@
           <i class="fa fa-search"></i>
         </button>
         <button class="header__btn header__btn--sort">
-          <i class="fa fa-sort-amount-down"></i>
+          <i class="fa fa-sort-amount-up-alt"></i>
         </button>
       </header>
-      <!-- [END HEADER] -->
-      <!-- [START PAGINATION] -->
-      <nav class="attedance__pagination pagination">
-        <section class="pagination__header">
-          <h3>2021 Oct</h3>
-          <i class="fa fa-calendar" aria-hidden="true"></i>
-        </section>
+      <!-- #endregion [END HEADER] -->
+      <!-- #region [START PAGINATION] -->
+      <nav class="attendance__pagination pagination">
         <section class="pagination__main">
-          <button class="pagination__btn pagination__btn--prev">
-            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+          <span class="pagination__day">Fri</span>
+          <button class="pagination__btn pagination__btn--date" type="button">
+            05
           </button>
-          <!-- [START LIST] -->
-          <!-- pagination__item pagination__item--current pagination__item--today -->
-          <ul class="pagination__date">
-            <li class="pagination__item">
-              <span class="pagination__week">SAT</span>
-              <button class="pagination__day">1</button>
-            </li>
-            <li class="pagination__item">
-              <span class="pagination__week">SUN</span>
-              <button class="pagination__day">2</button>
-            </li>
-            <li class="pagination__item">
-              <span class="pagination__week">MON</span>
-              <button class="pagination__day">3</button>
-            </li>
-            <li class="pagination__item pagination__item--today">
-              <span class="pagination__week"><strong>TUE</strong></span>
-              <button class="pagination__day"><strong>4</strong></button>
-            </li>
-            <li class="pagination__item">
-              <span class="pagination__week">WED</span>
-              <button class="pagination__day">5</button>
-            </li>
-            <li class="pagination__item">
-              <span class="pagination__week">THU</span>
-              <button class="pagination__day">6</button>
-            </li>
-            <li class="pagination__item">
-              <span class="pagination__week">FRI</span>
-              <button class="pagination__day">7</button>
-            </li>
-          </ul>
-          <!-- [END LIST] -->
-          <button class="pagination__btn pagination__btn--next">
-            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+          <button class="pagination__btn pagination__btn--month" type="button">
+            Oct
+          </button>
+          <button class="pagination__btn pagination__btn--year" type="button">
+            2021
           </button>
         </section>
+        <button class="pagination__icon" type="button">
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+        </button>
       </nav>
-      <!-- [END PAGINATION] -->
-      <!-- [START MAIN] -->
-      <article class="attedance__view list_view">
-        <ul id="attedance-list" class="card__list">
+      <!-- #endregion [END PAGINATION] -->
+      <!-- #region [START FAB] -->
+      <button class="attendance__fab">
+        <i class="fa fa-plus"></i>
+      </button>
+      <!-- #endregion [END FAB] -->
+      <!-- #region [START MAIN] -->
+      <article class="attendance__view list_view">
+        <ul id="attendance-list" class="card__list">
           <!-- [START ITEM] -->
           <li class="card__item">
-            <div class="card__detail">
-              <header class="card__header">
-                <h3 class="card__title">Daniel Martin</h3>
-                <span class="card__description">Developer</span>
-              </header>
-              <table class="card__table">
-                <thead>
-                  <tr>
-                    <th scope="col">Arrival</th>
-                    <th scope="col">Departure</th>
-                    <!-- <th scope="col">State</th> -->
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><strong> 07 : 00 </strong></td>
-                    <td><strong> 15 : 30 </strong></td>
-                    <!-- <td><i class="fa fa-check"></i></td> -->
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <figure class="card__profile">
-              <img src="./screenshots/profile.png" alt="" class="card__image" />
-              <figcaption class="card__state">
-                <!-- STATE_COLOR || USERNAME -->
-              </figcaption>
-            </figure>
+            <button
+              onclick="(() => { document.querySelector('.card__item').classList.toggle('card__item--menu') })();"
+              id="card-menu-toggle"
+              class="card__toggle"
+              type="menu"
+            >
+              <i class="far fa-ellipsis-h"></i>
+            </button>
+            <!-- [START MENU] -->
+            <ul class="card__menu" role="menu">
+              <li class="card__menu_item">
+                <span class="card__menu_title">Edit</span>
+                <button class="card__menu_btn">
+                  <i class="fa fa-edit"></i>
+                </button>
+              </li>
+              <li class="card__menu_item">
+                <span class="card__menu_title">Delete</span>
+                <button class="card__menu_btn">
+                  <i class="fa fa-trash"></i>
+                </button>
+              </li>
+              <li class="card__menu_item">
+                <span class="card__menu_title">Start</span>
+                <button class="card__menu_btn">
+                  <i class="fa fa-circle"></i>
+                </button>
+              </li>
+              <li class="card__menu_item">
+                <span class="card__menu_title">Pause</span>
+                <button class="card__menu_btn">
+                  <i class="fa fa-pause"></i>
+                </button>
+              </li>
+
+              <li class="card__menu_item">
+                <span class="card__menu_title">Stop</span>
+                <button class="card__menu_btn">
+                  <i class="fa fa-stop"></i>
+                </button>
+              </li>
+              <li class="card__menu_item">
+                <span class="card__menu_title">Open</span>
+                <button class="card__menu_btn">
+                  <i class="fa fa-external-link"></i>
+                </button>
+              </li>
+              <li class="card__menu_item">
+                <span class="card__menu_title">Pass</span>
+                <button class="card__menu_btn">
+                  <i class="fa fa-check"></i>
+                </button>
+              </li>
+              <li class="card__menu_item">
+                <span class="card__menu_title">Absent</span>
+                <button class="card__menu_btn">
+                  <i class="fa fa-times"></i>
+                </button>
+              </li>
+            </ul>
+            <!-- [END MENU] -->
+            <!-- [START CARD-MAIN] -->
+            <section class="card__main">
+              <div class="card__detail">
+                <header class="card__header">
+                  <h3 class="card__title">Daniel Martin</h3>
+                  <span class="card__description">Developer</span>
+                </header>
+                <table class="card__table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Arrival</th>
+                      <th scope="col">Departure</th>
+                      <!-- <th scope="col">State</th> -->
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong> 07 : 00 </strong></td>
+                      <td><strong> 15 : 30 </strong></td>
+                      <!-- <td><i class="fa fa-check"></i></td> -->
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <figure class="card__profile">
+                <img
+                  src="./screenshots/profile.png"
+                  alt=""
+                  class="card__image"
+                />
+                <figcaption class="card__state">
+                  <!-- STATE_COLOR || USERNAME -->
+                </figcaption>
+              </figure>
+            </section>
+            <!-- [END CARD-MAIN] -->
           </li>
           <!-- [END ITEM] -->
           <!-- [START ITEM] -->
           <li class="card__item">
-            <div class="card__detail">
-              <header class="card__header">
-                <h3 class="card__title">Mike Pompeo</h3>
-                <span class="card__description">Developer</span>
-              </header>
-              <table class="card__table">
-                <thead>
-                  <tr>
-                    <th scope="col">Arrival</th>
-                    <th scope="col">Departure</th>
-                    <!-- <th scope="col">State</th> -->
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><strong> 07 : 00 </strong></td>
-                    <td><strong> 15 : 30 </strong></td>
-                    <!-- <td><i class="fa fa-check"></i></td> -->
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <figure class="card__profile">
-              <img src="./screenshots/profile.png" alt="" class="card__image" />
-              <figcaption class="card__state card__state--state_1">
-                <!-- STATE_COLOR || USERNAME -->
-              </figcaption>
-            </figure>
+            <!-- [START CARD-MAIN] -->
+            <section class="card__main">
+              <div class="card__detail">
+                <header class="card__header">
+                  <h3 class="card__title">Mike Pompeo</h3>
+                  <span class="card__description">Developer</span>
+                </header>
+                <table class="card__table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Arrival</th>
+                      <th scope="col">Departure</th>
+                      <!-- <th scope="col">State</th> -->
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong> 07 : 00 </strong></td>
+                      <td><strong> 15 : 30 </strong></td>
+                      <!-- <td><i class="fa fa-check"></i></td> -->
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <figure class="card__profile">
+                <img
+                  src="./screenshots/profile.png"
+                  alt=""
+                  class="card__image"
+                />
+                <figcaption class="card__state card__state--state_1">
+                  <!-- STATE_COLOR || USERNAME -->
+                </figcaption>
+              </figure>
+            </section>
+            <!-- [END CARD-MAIN] -->
           </li>
           <!-- [END ITEM] -->
           <!-- [START ITEM] -->
@@ -291,17 +348,17 @@
           <!-- [END ITEM] -->
         </ul>
       </article>
-      <!-- [END MAIN] -->
+      <!-- #endregion [END MAIN] -->
     </main>
-    <!-- [END APP] -->
+    <!-- #endregion [END APP] -->
 
-    <!-- [START SCRIPTS] -->
+    <!-- #region [START SCRIPTS] -->
     <!-- // <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/gh/miko-github/miko-github@v0.2.0/codepen.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/miko-github/miko-github@v1.1.0/codepen.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
     <!-- // <script src="https://cdpn.io/cp/internal/boomboom/pen.js?key=pen.js-2a39695b-e8f0-2522-8509-7b94108d8295" crossorigin=""></script> -->
     <script src="./main.js"></script>
-    <!-- [END SCRIPTS] -->
+    <!-- #endregion [END SCRIPTS] -->
   </body>
 </html>
