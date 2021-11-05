@@ -2,12 +2,18 @@
 
 /* powered by sass */
 
-$c-primary: #5374ff;
-$c-secondary: #738999;
-$c-gray: #f2f5f8;
-$c-white: #ffffff;
-$c-black: #333333;
-$c-background: #e8eaee;
+// TODO : move to yek-sass
+@mixin --fcenter {
+  @include flex;
+  @include aligns;
+}
+
+$c-primary: #5374ff !default;
+$c-secondary: #738999 !default;
+$c-gray: #f2f5f8 !default;
+$c-white: #ffffff !default;
+$c-black: #333333 !default;
+$c-background: #e8eaee !default;
 
 body {
   @include aligns;
@@ -18,47 +24,52 @@ figure {
 }
 
 /* [APPILICATION] */
-.attedance {
+.attendance {
+  @include relative;
   @include flex(column);
-  @include size(100%, 100vh);
-  position: relative;
-  overflow: hidden;
-  background-color: $c-background;
-  // box-shadow: 0 4px 7px rgba($c-black, 0.3);
+  @include size(360px, 100vh);
   @include --radius(8);
+  overflow: hidden;
 
-  // MARK : header
+  &__fab {
+    @include --clear-fab($offset: 50);
+    font-size: 1.3rem;
+  }
+
   &__header {
-    @include flex;
-    @include align(space-between);
-    @include height(25px);
-    padding: 4px 9px;
+    height: 30px;
+    padding: 10px 26px 4px 8px;
   }
 
-  // MARK : pagination
   &__pagination {
-    @include size(100%, 95px);
-    padding: 10px 0;
-    box-shadow: 0 0.3rem 0.3rem rgba($c-secondary, 0.4);
+    @include size(100%, 45px);
+    margin-top: 5px;
+    // order: 1; /* move to bottom */
   }
 
-  // MARK : view
   &__view {
-    @include size(100%, calc(100% - 150px));
+    @include size(100%, calc(100% - 80px));
   }
 }
 
+/* [HEADER] */
 .header {
+  @include flex;
+  @include align(space-between);
+
+  &__title {
+    @include size(calc(100% - 150px), 100%);
+  }
+
   &__btn {
     @include --clear-btn;
     // @include --radius(5);
     @include size(16px, 16px);
     padding: 4px;
-
-    text-align: center;
-    vertical-align: middle;
-    line-height: 5px;
+    background-color: transparent;
+    @include --fcenter;
   }
+
   &__btn i {
     font-size: 0.8em;
   }
@@ -66,127 +77,107 @@ figure {
 
 /* [PAGINATION] */
 .pagination {
-  @include flex(column);
-  margin-top: 30px;
+  @include flex;
 
-  &__header {
-    @include flex;
-    @include size(100%, 20px);
-    @include align(space-between);
-    padding: 0 43px;
-    font-size: 0.8em;
-
-    h3 {
-      @include --clear-space;
-    }
+  &__icon {
+    width: 10%;
   }
+
   &__main {
     @include flex;
-    @include size(100%, 55px);
+    width: 90%;
+    order: 1;
+    // @include align(space-around);
+  }
+
+  &__btn,
+  &__icon {
+    @include --clear-btn;
+    @include --btn-effect;
+    background-color: transparent;
   }
 
   &__btn,
   &__day {
-    @include --clear-btn;
-    background-color: transparent;
+    width: 25%;
+    text-align: center;
+    // font-size: 0.8em;
   }
 
-  &__btn {
-    @include size(25px, 100%);
-    @include flex;
-    @include aligns;
-  }
-  &__date {
-    @include --clear-list;
-    @include size(calc(100% - 50px), 100%);
-    @include flex;
-    @include aligns;
-  }
-
-  &__item {
-    @include flex(column);
-    @include size(14.28%, 100%);
-    @include align(space-around);
-    @include --radius;
-    padding: 6px 4px;
-    margin: 0;
-    cursor: pointer;
-
-    &--today {
-      // MARK : theme 1
-      box-shadow: 0.1rem 0.1rem 0.15rem rgba($c-secondary, 0.5),
-        -0.1rem 0.1rem 0.15rem rgba($c-secondary, 0.5);
-    }
+  &__main,
+  &__icon,
+  &__btn,
+  &__day {
+    height: 100%;
   }
 
   &__btn,
-  &__item {
-    @include --btn-effect;
-  }
-
-  &__week {
-    font-size: 0.8rem;
-  }
-
   &__day,
-  &__week {
-    text-align: center;
+  &__icon {
+    @include --fcenter;
   }
 }
 
 /* [LIST VIEW] */
-
 .list_view,
 .card__list {
   @include --clear-space;
   width: 100%;
-
   overflow: hidden;
-  overflow-y: auto;
-  scroll-behavior: smooth;
-  padding: 16px;
 }
 
-img {
-  @include --image-cover;
-  @include size(50px, 50px);
-}
 /* [CARD] */
 .card {
+  &__list {
+    @include size(100%, 98%);
+    padding: 4px 12px;
+    overflow-y: auto;
+    // overscroll-behavior: none;
+    scroll-behavior: smooth;
+  }
+
   &__item {
     @include flex;
+    @include relative;
+    @include size(100%, 155px);
     @include --radius(12);
-    @include size(100%, 165px);
     @include --clear-space;
     margin: 16px 0;
-
-    cursor: pointer;
-    box-shadow: 0 0.2rem 0.1rem rgba($c-secondary, 0.3);
-    &:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0.5rem 0.3rem rgba($c-secondary, 0.6);
-    }
-
-    // MARK : theme 2
-    background: $c-white;
+    overflow: hidden;
   }
+
+  &__item:hover {
+    // transform: scale(1.03);
+    // box-shadow: 0 0.5rem 0.3rem rgba($c-secondary, 0.6);
+  }
+}
+
+// [MAIN] //
+.card {
+  &__main {
+    @include flex;
+    cursor: pointer;
+  }
+
   &__detail {
     @include flex(column);
-
-    @include size(60%);
-    padding: 16px;
+    @include size(65%);
+    padding: 8px;
     padding-left: 2px;
     order: 1;
   }
+
   &__profile {
     @include relative;
-    @include size(40%);
-    padding: 12px;
+    @include size(35%);
+    padding: 8px; /* 8 | 12 */
   }
+
   &__image {
     @include --image-cover;
     @include --radius(8);
   }
+
   &__state {
     $s-1: #ffd428;
     $s-2: #f78361;
@@ -194,7 +185,7 @@ img {
     $s-4: #2d3448;
     @include size(15px, 15px);
     @include --radius(10);
-    @include absolute($top: 7px, $right: 7px);
+    @include absolute($top: 4px, $right: 4px);
 
     &--state_1 {
       background: $s-1;
@@ -212,68 +203,268 @@ img {
 
   &__header {
     @include flex(column);
-    @include height(70px);
+    height: 70px;
+    line-height: 26px;
 
     h3 {
       @include --clear-space;
     }
-
     span {
       font-size: 0.87rem;
     }
-
-    line-height: 26px;
   }
 
   &__table {
     @include flex(column);
-    @include width(100%);
-    @include height(64px);
+    @include size(100%, 64px);
     @include --clear-space;
-    // margin-top: 12px;
     padding: 4px;
     padding-top: 9px;
+    // margin-top: 6px;
+  }
 
+  &__table {
     &,
     thead,
     tbody {
       @include --radius;
       text-align: center;
-      // MARK : theme 3
-      background: $c-gray;
-      color: $c-secondary;
     }
 
     thead {
       @include size(100%, 20px);
       font-size: 0.74rem;
     }
+
     tbody {
       @include size(100%, 30px);
+    }
+
+    tr {
+      @include flex;
+      @include aligns(space-around);
+      width: 100%;
     }
 
     th {
       font-weight: 600;
     }
 
-    tr {
-      @include flex;
-      @include aligns(space-around);
-      @include size(100%);
-    }
     td {
-      // font-weight: 900;
       font-size: 1.03rem;
-    }
-
-    tr {
-      @include flex;
-      @include align(space-around);
+      // font-weight: 900;
     }
 
     th,
     td {
       @include width(50%);
     }
+  }
+}
+
+// [MENU] //
+.card__menu {
+  @include aligns(space-around);
+  @include --clear-list;
+  // padding: 25px;
+
+  &,
+  &_item {
+    @include flex;
+    @include aligns(space-around);
+  }
+
+  &_item {
+    @include size(20%, 40%);
+    @include --radius;
+    @include --clear-list;
+    @include --btn-effect;
+    margin: 6px;
+    padding-top: 9px;
+    cursor: pointer;
+  }
+
+  &_title {
+    height: 40%;
+    order: 1;
+  }
+
+  &_btn {
+    @include --clear-btn;
+    @include size(90%, 40%);
+    background-color: transparent;
+  }
+}
+
+// [MAIN/MENU] //
+.card {
+  &__toggle {
+    @include absolute(15px, $right: 15px);
+    @include --clear-btn;
+    @include --btn-effect;
+    background-color: transparent;
+  }
+
+  &__main,
+  &__menu {
+    @include size;
+    @include --clear-space;
+  }
+
+  &__menu {
+    margin-top: -110%; /* transition: push-down */
+    overflow: hidden;
+  }
+
+  &__item--menu &__menu {
+    margin-top: 0; /* transition : push-down */
+  }
+}
+
+//* --------- [THEME] -------------------------------- *//
+// [DEFAULT/LIGHT] //
+.attendance {
+  background-color: $c-background;
+  // box-shadow: 0 4px 7px rgba($c-black, 0.3);
+
+  &__fab {
+    background: $c-primary;
+    color: $c-gray;
+  }
+
+  &__pagination {
+    box-shadow: 0 0.3rem 0.3rem rgba($c-secondary, 0.4);
+  }
+
+  &--today /* alternate */ {
+    box-shadow: 0.1rem 0.1rem 0.15rem rgba($c-secondary, 0.5),
+      -0.1rem 0.1rem 0.15rem rgba($c-secondary, 0.5);
+  }
+}
+.card {
+  &__item {
+    box-shadow: 0 0.2rem 0.1rem rgba($c-secondary, 0.3);
+    background: $c-white;
+  }
+
+  &__table {
+    &,
+    thead,
+    tbody {
+      background: $c-gray;
+      color: $c-secondary;
+    }
+  }
+
+  &__menu_item {
+    background-color: $c-gray;
+    &:hover {
+      box-shadow: 0 0 0 0.2rem rgba($c-primary, 0.3);
+    }
+  }
+}
+
+// [VARIANT] //
+.attendance {
+  &--variant {
+    $c-primary: #f54b64 !global;
+    $c-secondary: #f78361 !global;
+    $c-gray: #2d3448 !global;
+    $c-black: #ffd428 !global;
+    $c-background: $c-black !global;
+  }
+
+  &--variant {
+    background-color: $c-background;
+  }
+
+  &--variant,
+  &--variant button {
+    color: $c-gray;
+  }
+
+  &--variant .attendance__pagination {
+    box-shadow: 0 0.3rem 0.3rem rgba($c-secondary, 0.4);
+  }
+  &--variant .attendance__fab {
+    background-color: $c-gray;
+    color: $c-secondary;
+  }
+  &--variant .card__item {
+    box-shadow: none;
+    background-color: $c-secondary;
+    color: $c-white;
+  }
+  &--variant .card__toggle {
+    color: $c-black;
+  }
+  &--variant .card__table {
+    &,
+    thead,
+    tbody {
+      background-color: $c-gray;
+      color: $c-secondary;
+    }
+  }
+  &--variant .card__menu_item,
+  &--variant .card__menu_item button {
+    background-color: $c-white;
+    color: $c-black;
+  }
+  &--variant .card__menu_item:hover {
+    box-shadow: 0 0 0 0.25rem rgba($c-gray, 0.3);
+  }
+}
+
+// [DARK] //
+.attendance {
+  &--dark {
+    $c-primary: #5374ff !global;
+    $c-secondary: #738999 !global;
+    $c-gray: #f2f5f8 !global;
+    $c-white: #ffffff !global;
+    $c-black: #333333 !global;
+    $c-background: $c-black !global;
+  }
+
+  &--dark {
+    background-color: $c-background;
+  }
+
+  &--dark,
+  &--dark button {
+    color: $c-gray;
+  }
+
+  &--dark .attendance__pagination {
+    box-shadow: 0 0.3rem 0.3rem rgba($c-secondary, 0.4);
+  }
+  &--dark .attendance__fab {
+    background-color: $c-gray;
+    color: $c-secondary;
+  }
+  &--dark .card__item {
+    box-shadow: none;
+    background-color: $c-secondary;
+    color: $c-white;
+  }
+  &--dark .card__toggle {
+    color: $c-black;
+  }
+  &--dark .card__table {
+    &,
+    thead,
+    tbody {
+      background-color: $c-gray;
+      color: $c-secondary;
+    }
+  }
+  &--dark .card__menu_item,
+  &--dark .card__menu_item button {
+    background-color: $c-white;
+    color: $c-black;
+  }
+  &--dark .card__menu_item:hover {
+    box-shadow: 0 0 0 0.25rem rgba($c-gray, 0.3);
   }
 }
