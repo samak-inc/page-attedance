@@ -14,7 +14,7 @@ because i love ❤️ opensource, did you like it?
 
 ### SCREENSHOTS
 
-<img src="./screenshots/screenshot-2.png" title="DARK THEME" alt="attendance - miko-github - 2021" width="150" height="270" /> <img src="./screenshots/screenshot-1.png" title="LIGHT/DEFAULT THEME" alt="attendance - mikoloism - 2021" width="150" height="270" /> <img src="./screenshots/screenshot-3.png" title="VARIANT THEME" alt="attendance - mikoloism - 2021" width="150" height="270" />
+<img src="./screenshots/screenshot-3.png" title="DARK THEME" alt="attendance - miko-github - 2021" width="150" height="270" /> <img src="./screenshots/screenshot-2.png" title="DARK_INVERT THEME" alt="attendance - mikoloism - 2021" width="150" height="270" /> <img src="./screenshots/screenshot-1.png" title="LIGHT/DEFAULT THEME" alt="attendance - mikoloism - 2021" width="150" height="270" /> <img src="./screenshots/screenshot-4.png" title="VIOLET THEME" alt="attendance - mikoloism - 2021" width="150" height="270" /> <img src="./screenshots/screenshot-5.png" title="VIOLET_INVERTT THEME" alt="attendance - mikoloism - 2021" width="150" height="270" />
 
 ### LICENSE and MORE
 
