@@ -1,3 +1,5 @@
+// remove below line if commit
+@import './_codepen.scss';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* powered by sass */
@@ -364,9 +366,9 @@ figure {
   }
 }
 
-// [VARIANT] //
+// [violet] //
 .attendance {
-  &--variant {
+  &--violet {
     $c-primary: #f54b64 !global;
     $c-secondary: #f78361 !global;
     $c-gray: #2d3448 !global;
@@ -374,31 +376,31 @@ figure {
     $c-background: $c-black !global;
   }
 
-  &--variant {
+  &--violet {
     background-color: $c-background;
   }
 
-  &--variant,
-  &--variant button {
+  &--violet,
+  &--violet button {
     color: $c-gray;
   }
 
-  &--variant .attendance__pagination {
+  &--violet .attendance__pagination {
     box-shadow: 0 0.3rem 0.3rem rgba($c-secondary, 0.4);
   }
-  &--variant .attendance__fab {
+  &--violet .attendance__fab {
     background-color: $c-gray;
     color: $c-secondary;
   }
-  &--variant .card__item {
+  &--violet .card__item {
     box-shadow: none;
     background-color: $c-secondary;
     color: $c-white;
   }
-  &--variant .card__toggle {
+  &--violet .card__toggle {
     color: $c-black;
   }
-  &--variant .card__table {
+  &--violet .card__table {
     &,
     thead,
     tbody {
@@ -406,12 +408,12 @@ figure {
       color: $c-secondary;
     }
   }
-  &--variant .card__menu_item,
-  &--variant .card__menu_item button {
-    background-color: $c-white;
+  &--violet .card__menu_item,
+  &--violet .card__menu_item button {
+    background-color: $c-gray;
     color: $c-black;
   }
-  &--variant .card__menu_item:hover {
+  &--violet .card__menu_item:hover {
     box-shadow: 0 0 0 0.25rem rgba($c-gray, 0.3);
   }
 }
