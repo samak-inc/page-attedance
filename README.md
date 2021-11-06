@@ -1,7 +1,8 @@
-## Attedance
+## Attendance
 
 > Oct 20 2021\
-> <a href="https://codepen.io/miko-github/full/{TARGET}" target="_blank"><strong>Live Preview</strong></a>
+> <small>update : Nov 6 2021</small>\
+> <a href="https://codepen.io/miko-github/full/QWMmbxp" target="_blank"><strong>Live Preview</strong></a>
 
 <!--
 Hi there 👋,
@@ -13,7 +14,7 @@ because i love ❤️ opensource, did you like it?
 
 ### SCREENSHOTS
 
-<img src="./screenshots/screenshot-2.png" title="{TITLE}" alt="attedance - miko-github - 2021" width="300" height="145" /> <img src="./screenshots/screenshot-1.png" title="{TITLE}" alt="attedance - mikoloism - 2021" width="300" height="145" /> <img src="./screenshots/screenshot-3.png" title="{TITLE}" alt="attedance - mikoloism - 2021" width="300" height="145" />
+<img src="./screenshots/screenshot-2.png" title="{TITLE}" alt="attendance - miko-github - 2021" width="150" height="270" /> <img src="./screenshots/screenshot-1.png" title="{TITLE}" alt="attendance - mikoloism - 2021" width="150" height="270" /> <img src="./screenshots/screenshot-3.png" title="{TITLE}" alt="attendance - mikoloism - 2021" width="150" height="270" />
 
 ### LICENSE and MORE
 
