@@ -366,7 +366,7 @@ figure {
   }
 }
 
-// [violet] //
+// [VIOLET] //
 .attendance {
   &--violet {
     $c-primary: #f54b64 !global;
@@ -385,12 +385,12 @@ figure {
     color: $c-gray;
   }
 
-  &--violet .attendance__pagination {
+  &--violet &__pagination {
     box-shadow: 0 0.3rem 0.3rem rgba($c-secondary, 0.4);
   }
-  &--violet .attendance__fab {
-    background-color: $c-gray;
-    color: $c-secondary;
+  &--violet &__fab {
+    background-color: $c-primary;
+    color: $c-white;
   }
   &--violet .card__item {
     box-shadow: none;
@@ -408,13 +408,79 @@ figure {
       color: $c-secondary;
     }
   }
+
+  &--violet .pagination__btn:hover {
+    color: $c-primary;
+  }
+  &--violet .card__menu {
+    background-color: $c-primary;
+  }
   &--violet .card__menu_item,
   &--violet .card__menu_item button {
     background-color: $c-gray;
-    color: $c-black;
+    color: $c-white;
   }
   &--violet .card__menu_item:hover {
-    box-shadow: 0 0 0 0.25rem rgba($c-gray, 0.3);
+    box-shadow: 0 0 0 0.3rem rgba($c-gray, 0.4);
+  }
+}
+
+// [VIOLET invert] //
+.attendance {
+  &--violet_2 {
+    $c-primary: #f54b64 !global;
+    $c-secondary: #f78361 !global;
+    $c-gray: #2d3448 !global;
+    $c-black: #ffd428 !global;
+    $c-background: $c-black !global;
+  }
+
+  &--violet_2 {
+    background-color: $c-background;
+  }
+
+  &--violet_2,
+  &--violet_2 button {
+    color: $c-gray;
+  }
+
+  &--violet_2 &__pagination {
+    box-shadow: 0 0.3rem 0.3rem rgba($c-secondary, 0.4);
+  }
+  &--violet_2 &__fab {
+    background-color: $c-gray;
+    color: $c-white;
+  }
+  &--violet_2 .card__item {
+    box-shadow: none;
+    background-color: $c-primary;
+    color: $c-white;
+  }
+  &--violet_2 .card__toggle {
+    color: $c-white;
+  }
+  &--violet_2 .card__table {
+    &,
+    thead,
+    tbody {
+      background-color: $c-gray;
+      color: $c-white;
+    }
+  }
+
+  &--violet_2 .pagination__btn:hover {
+    color: $c-primary;
+  }
+  &--violet_2 .card__menu {
+    background-color: $c-primary;
+  }
+  &--violet_2 .card__menu_item,
+  &--violet_2 .card__menu_item button {
+    background-color: $c-black;
+    color: $c-gray;
+  }
+  &--violet_2 .card__menu_item:hover {
+    box-shadow: 0 0 0 0.3rem rgba($c-gray, 0.4);
   }
 }
 
@@ -438,10 +504,10 @@ figure {
     color: $c-gray;
   }
 
-  &--dark .attendance__pagination {
+  &--dark &__pagination {
     box-shadow: 0 0.3rem 0.3rem rgba($c-secondary, 0.4);
   }
-  &--dark .attendance__fab {
+  &--dark &__fab {
     background-color: $c-gray;
     color: $c-secondary;
   }
@@ -467,6 +533,62 @@ figure {
     color: $c-black;
   }
   &--dark .card__menu_item:hover {
+    box-shadow: 0 0 0 0.25rem rgba($c-gray, 0.3);
+  }
+}
+
+// [DARK invert] //
+.attendance {
+  &--dark_2 {
+    $c-primary: #5374ff !global;
+    $c-secondary: #738999 !global;
+    $c-gray: #f2f5f8 !global;
+    $c-white: #ffffff !global;
+    $c-black: #333333 !global;
+    $c-background: $c-secondary !global;
+  }
+
+  &--dark_2 {
+    background-color: $c-background;
+  }
+
+  &--dark_2,
+  &--dark_2 button {
+    color: $c-gray;
+  }
+
+  &--dark_2 &__pagination {
+    box-shadow: 0 0.3rem 0.3rem rgba($c-secondary, 0.4);
+  }
+  &--dark_2 .pagination__btn:hover {
+    color: $c-black;
+  }
+  &--dark_2 &__fab {
+    background-color: $c-gray;
+    color: $c-secondary;
+  }
+  &--dark_2 .card__item {
+    // box-shadow: none;
+    background-color: $c-black;
+    color: $c-gray;
+  }
+  &--dark_2 .card__toggle {
+    color: $c-white;
+  }
+  &--dark_2 .card__table {
+    &,
+    thead,
+    tbody {
+      background-color: $c-gray;
+      color: $c-secondary;
+    }
+  }
+  &--dark_2 .card__menu_item,
+  &--dark_2 .card__menu_item button {
+    background-color: $c-gray;
+    color: $c-black;
+  }
+  &--dark_2 .card__menu_item:hover {
     box-shadow: 0 0 0 0.25rem rgba($c-gray, 0.3);
   }
 }
